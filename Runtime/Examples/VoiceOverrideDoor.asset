@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoiceOverrideDoor
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 69326254f7f598740ab8c754d6653558,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: a6b73d0fd6be8d34495e414d11244ead,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 4883f9e2553a771479c75a9c20a50b88, type: 3}
-  behaviourSyncMode: 1
+  behaviourSyncMode: 2
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
       Data: 15|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -290,7 +290,7 @@ MonoBehaviour:
       Data: 20|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.Examples.VoiceOverrideRoom, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.Examples.VoiceOverrideRoom, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

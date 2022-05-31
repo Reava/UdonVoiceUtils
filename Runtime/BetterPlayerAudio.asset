@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: BetterPlayerAudio
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: a963f44a082aa384cba5402eff243974,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 55bf23d6744b03e4ea5c4af8df6b24cd,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 26bfbf1b1a5e2e345b13767ec5b829a3, type: 3}
-  behaviourSyncMode: 3
+  behaviourSyncMode: 4
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 70
+      Data: 71
     - Name: 
       Entry: 7
       Data: 
@@ -1725,7 +1725,7 @@ MonoBehaviour:
       Data: 112|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverrideList, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverrideList, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -1926,7 +1926,7 @@ MonoBehaviour:
       Data: 125|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -4635,7 +4635,7 @@ MonoBehaviour:
       Data: 302|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverrideList[], Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverrideList[], Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -4821,7 +4821,7 @@ MonoBehaviour:
       Data: 313|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -4862,6 +4862,64 @@ MonoBehaviour:
     - Name: userBehaviourSource
       Entry: 10
       Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: UiLayerMask
+    - Name: $v
+      Entry: 7
+      Data: 315|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 316|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 22
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemInt32
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: UiLayerMask
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: UiLayerMask
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 317|System.Collections.Generic.List`1[[System.Attribute, mscorlib]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

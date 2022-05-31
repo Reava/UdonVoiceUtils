@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: BetterPlayerAudioUiController
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b4d12f05b7311e44faf6cb814103a413,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: eba842b90dc95244ea7acb43295a397d,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 2d0f84b9d12c3ee40b92e363d3a9efcb, type: 3}
-  behaviourSyncMode: 1
+  behaviourSyncMode: 2
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudio, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudio, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

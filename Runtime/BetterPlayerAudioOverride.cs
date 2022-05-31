@@ -16,7 +16,6 @@ namespace Guribo.UdonBetterAudio.Runtime
         #region Settings
 
         [Header("General settings")]
-        
         /// <summary>
         /// Determines whether it 
         /// Overrides with equal or higher values can override other overrides with lower priority.
@@ -90,7 +89,7 @@ namespace Guribo.UdonBetterAudio.Runtime
         public AudioReverbFilter optionalReverb;
 
         #endregion
-        
+
         #region Voice settings
 
         [Header("Voice settings")]
@@ -190,27 +189,30 @@ namespace Guribo.UdonBetterAudio.Runtime
         [Tooltip(
             "If set to true affected players also can't hear non-affected players. Only in effect in combination with a privacy channel not equal to -1.")]
         public bool muteOutsiders = true;
-        
+
         /// <summary>
         /// prevents the local player from listening to any other player in the same channel, can be used to talk to
         /// players in a private room without being able to hear what is going on inside
         /// </summary>
-        [Tooltip("Prevents the local player from listening to any other player in the same channel, can be used to talk to players in a private room without being able to hear what is going on inside")]
+        [Tooltip(
+            "Prevents the local player from listening to any other player in the same channel, can be used to talk to players in a private room without being able to hear what is going on inside")]
         public bool disallowListeningToChannel;
 
         #endregion
+
         #region Optional listeners
-        
+
         [Header("Optional Listeners")]
-        
-        [Tooltip("Behaviours to notify when the local player has been added (does not mean the override is active e.g. when another override with higher priority is already active)")]
+        [Tooltip(
+            "Behaviours to notify when the local player has been added (does not mean the override is active e.g. when another override with higher priority is already active)")]
         public UdonSharpBehaviour[] localPlayerAddedListeners;
         public string localPlayerAddedEvent = "LocalPlayerAdded";
-        
-        [Tooltip("Behaviours to notify when the local player has been removed (does not mean the override was active e.g. when another override with higher priority was already active)")]
+
+        [Tooltip(
+            "Behaviours to notify when the local player has been removed (does not mean the override was active e.g. when another override with higher priority was already active)")]
         public UdonSharpBehaviour[] localPlayerRemovedListeners;
         public string localPlayerRemovedEvent = "LocalPlayerRemoved";
-        
+
         #endregion
 
         #region Mandatory references
@@ -220,17 +222,15 @@ namespace Guribo.UdonBetterAudio.Runtime
         public UdonDebug udonDebug;
         public PlayerList playerList;
 
-
         #endregion
 
         #region Readonly Properties
 
         #endregion
-        
+
         #region State
 
         internal bool HasStarted = false;
-
 
         #endregion
 
@@ -238,6 +238,7 @@ namespace Guribo.UdonBetterAudio.Runtime
 
         public void OnEnable()
         {
+            Debug.Log("OnEnable");
             Start();
 
             if (!udonDebug.Assert(playerList, "playerList invalid", this))
@@ -258,19 +259,20 @@ namespace Guribo.UdonBetterAudio.Runtime
                 {
                     continue;
                 }
-                
+
                 betterPlayerAudio.OverridePlayerSettings(this, playerToAffect);
-                
+
                 if (playerToAffect.isLocal)
                 {
                     // ActivateReverb();
-                    Notify(localPlayerAddedListeners,localPlayerAddedEvent);
+                    Notify(localPlayerAddedListeners, localPlayerAddedEvent);
                 }
             }
         }
 
         public void Start()
         {
+            Debug.Log("Start");
             if (HasStarted)
             {
                 return;
@@ -309,11 +311,11 @@ namespace Guribo.UdonBetterAudio.Runtime
                 {
                     playerList.DiscardInvalid();
                 }
-                
+
                 if (playerToRemove.isLocal)
                 {
                     // DeactivateReverb();
-                    Notify(localPlayerRemovedListeners,localPlayerRemovedEvent);
+                    Notify(localPlayerRemovedListeners, localPlayerRemovedEvent);
                 }
             }
         }
@@ -331,10 +333,10 @@ namespace Guribo.UdonBetterAudio.Runtime
         /// <returns>true if the player was added/was already added before</returns>
         public bool AddPlayer(VRCPlayerApi playerToAffect)
         {
-            if (!HasStarted)
-            {
-                Start();
-            }
+            
+            Debug.Log("AddPlayer");
+            
+            Start();
 
             if (!udonDebug.Assert(playerList, "playerList invalid", this))
             {
@@ -350,7 +352,7 @@ namespace Guribo.UdonBetterAudio.Runtime
             {
                 return false;
             }
-            
+
             if (!IsActiveAndEnabled())
             {
                 Debug.LogWarning($"Override {gameObject.name} is not enabled for {playerToAffect.displayName}");
@@ -393,8 +395,6 @@ namespace Guribo.UdonBetterAudio.Runtime
             return success;
         }
 
-        
-
 
         /// <summary>
         /// Remove player from the list of players that should make use of the here defined override values.
@@ -431,14 +431,14 @@ namespace Guribo.UdonBetterAudio.Runtime
 
 
             var success = true;
-            
+
             // make the controller apply default settings to the player again
             if (!betterPlayerAudio.ClearPlayerOverride(this, playerToRemove))
             {
                 var oldLength = playerList.players.Length;
-                success =  oldLength > playerList.DiscardInvalid();
+                success = oldLength > playerList.DiscardInvalid();
             }
-            
+
             if (playerToRemove.isLocal)
             {
                 // DeactivateReverb();
@@ -474,14 +474,14 @@ namespace Guribo.UdonBetterAudio.Runtime
             {
                 return;
             }
-            
+
             if (!udonDebug.Assert(Utilities.IsValid(playerList), "playerList invalid", this))
             {
                 return;
             }
-            
+
             playerList.DiscardInvalid();
-            
+
             var nonLocalPlayersWithOverrides = betterPlayerAudio.GetNonLocalPlayersWithOverrides();
             foreach (var nonLocalPlayersWithOverride in nonLocalPlayersWithOverrides)
             {
@@ -506,7 +506,7 @@ namespace Guribo.UdonBetterAudio.Runtime
             }
 
             playerList.DiscardInvalid();
-            
+
             if (IsActiveAndEnabled())
             {
                 if (!udonDebug.Assert(Utilities.IsValid(betterPlayerAudio), "playerAudio invalid", this))

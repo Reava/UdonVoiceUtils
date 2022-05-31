@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: PickupMicrophone
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b3f0c6feb0690a34eb1b0ae453553d9b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: d524fce4e6420cd44b4ef52b1f27b8ef,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 99aa6aced9437d14687a3676419030f1, type: 3}
-  behaviourSyncMode: 1
+  behaviourSyncMode: 2
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
       Data: 13|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -268,7 +268,7 @@ MonoBehaviour:
       Data: 18|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.Networking.OwnershipTransfer, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.Networking.OwnershipTransfer, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -331,7 +331,7 @@ MonoBehaviour:
       Data: 22|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.Networking.SyncedInteger, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.Networking.SyncedInteger, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

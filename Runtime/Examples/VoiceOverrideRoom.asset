@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: VoiceOverrideRoom
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 61af0bdb54953e54188432dbce0551dd,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7548e9e10b9f300419884d0314b7acfa,
     type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: a19e4b0b9efb22b46a9e2da195fc6be6, type: 3}
-  behaviourSyncMode: 1
+  behaviourSyncMode: 2
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
   hasInteractEvent: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
       Data: 16|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Guribo.UdonBetterAudio.Runtime
+      Data: Guribo.UdonBetterAudio.Runtime.BetterPlayerAudioOverride, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -328,7 +328,7 @@ MonoBehaviour:
       Data: 21|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.Networking.SyncedIntegerArray, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.Networking.SyncedIntegerArray, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -391,7 +391,7 @@ MonoBehaviour:
       Data: 25|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Guribo.UdonUtils.Runtime
+      Data: Guribo.UdonUtils.Runtime.Common.UdonDebug, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
